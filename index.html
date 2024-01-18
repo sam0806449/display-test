@@ -55,12 +55,13 @@
   <div id="app">
     <div class="header">header_0</div>
     <div class="content">
-      <p id="pp"></p>
+      <p id="pp"></p><br/><p id="pp2"></p>
     </div>
     <div class="footer">footer_0</div>
   </div>
   <script>
-      const text
+      var text = "";
+      var textall = "";
       var Sys = {};
       var ua = navigator.userAgent.toLowerCase();
       var s;
@@ -75,6 +76,7 @@
         : (s = ua.match(/version/([\d.]+).*safari/))
         ? (Sys.safari = s[1])
         : 0;
+      textall = ua;                               
       //以下进行测试
       if (Sys.edg) test = " Edge: " + Sys.edg;
       if (Sys.firefox) test = " Firefox: " + Sys.firefox;
@@ -83,7 +85,9 @@
       if (Sys.safari) test = " Safari: " + Sys.safari;
 
       const pNode = document.getElementById("pp");
+      const pNode2 = document.getElementById("pp2");
       pNode.appendChild(text)
+      pNode2.appendChild(textall)
     </script>
 </body>
 </html>
