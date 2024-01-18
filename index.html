@@ -62,11 +62,13 @@
       var text = "";
       var textall = "";
       var Sys = {};
-      var ua = navigator.userAgent.toLowerCase();
-      var wa = window.navigator.userAgent.toLowerCase();
+      var UA = window.navigator.userAgent.toLowerCase();
 
-      text = document.createTextNode(wa);
-      textall = document.createTextNode(ua);                          
+      text = document.createTextNode(UA);
+
+      if ( UA.indexOf('iphone') > -1 && UA.indexOf('safari') === -1 ) {
+         textall = document.createTextNode('是美聊');                             
+      }
 
       const pNode = document.getElementById("pp");
       const pNode2 = document.getElementById("pp2");
