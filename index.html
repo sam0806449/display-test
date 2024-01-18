@@ -54,8 +54,15 @@
 <body style="font-size: 12px;">
   <div id="app">
     <div class="header">header_0</div>
-    <div class="content">body</div>
+    <div class="content">
+      <p></p>
+    </div>
     <div class="footer">footer_0</div>
   </div>
+  <script>
+    const text = document.createTextNode(window.location.href);
+    const pNode = document.getElementById("p");
+    pNode.appendChild(text);
+  </script>
 </body>
 </html>
