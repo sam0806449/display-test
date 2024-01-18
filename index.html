@@ -66,13 +66,13 @@
       var ua = navigator.userAgent.toLowerCase();
       var wa = window.navigator.userAgent.toLowerCase();
 
-      test = wa;
-      textall = ua;                          
+      test = document.createTextNode(wa);
+      textall = document.createTextNode(ua);                          
 
       const pNode = document.getElementById("pp");
       const pNode2 = document.getElementById("pp2");
-      pNode.appendChild(text)
-      pNode2.appendChild(textall)
+      pNode.appendChild(text);
+      pNode2.appendChild(textall);
     </script>
 </body>
 </html>
