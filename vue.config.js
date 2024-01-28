@@ -17,7 +17,7 @@ const resolve = dir => path.join(__dirname, dir);
 module.exports = {
   // 输出文件目录
   outputDir: "dist",
-  publicPath: "./", // 默认'/'，部署应用包时的基本URL
+  publicPath: "/display-test/", // 默认'/'，部署应用包时的基本URL
 
   // 放置生成的静态资源 (js、css、img、fonts) 的 (相对于 outputDir 的) 目录
   assetsDir: "static",

@@ -31,55 +31,51 @@ export default {
 		},
 
 		initConfig() {
-			this.$get("/config/index.json")
-				.then(resp => {
-					return this.checkResp(resp, r => r.status === 200);
-				})
-				.then(data => {
-					this.$store.commit("setSkgCode", data)
-					if (['XOSOVN','SGDP', 'SGDG8'].includes(data.codeKey)) {
-						Locale.use('vi-VN', viVN)
-						setCultureFromCookie('vi-VN');
-						this.$store.commit("setCulture", 'vi-VN');
-						this.$i18n.locale = 'vi-VN';
+			const data = {
+				"codeKey": "DEVGJ",
+				"stencil": "skgGame",
+				"skinCode": "SGGJ"
+			}
+			this.$store.commit("setSkgCode", data)
+			if (['XOSOVN','SGDP', 'SGDG8'].includes(data.codeKey)) {
+				Locale.use('vi-VN', viVN)
+				setCultureFromCookie('vi-VN');
+				this.$store.commit("setCulture", 'vi-VN');
+				this.$i18n.locale = 'vi-VN';
+			}
+			if (data.codeKey === 'SGMGM' || data.codeKey === 'SGMP'){
+				// 客制翻译修改
+				// 覆盖相同key
+				Object.keys(SGMGMVI).forEach((key) => {
+					this.$i18n._vm.messages['vi-VN'][key] = {
+						...this.$i18n._vm.messages['vi-VN'][key],
+						...SGMGMVI[key]
 					}
-					if (data.codeKey === 'SGMGM' || data.codeKey === 'SGMP'){
-						// 客制翻译修改
-						// 覆盖相同key
-						Object.keys(SGMGMVI).forEach((key) => {
-							this.$i18n._vm.messages['vi-VN'][key] = {
-								...this.$i18n._vm.messages['vi-VN'][key],
-								...SGMGMVI[key]
-							}
-						});
-
-						// 新增key
-						i18n._vm.messages['vi-VN'].lottery = viVNSGMGM.lottery
-						i18n._vm.messages['vi-VN'].betLists = viVNSGMGM.betLists
-						i18n._vm.messages['vi-VN'].betDetails = viVNSGMGM.betDetails
-						i18n._vm.messages['vi-VN'].pK10Bet = viVNSGMGM.pK10Bet
-					}
-					if (data.codeKey === 'SG666'){
-						// 客制翻译修改
-						// 覆盖相同key
-						Object.keys(SG666CN).forEach((key) => {
-							this.$i18n._vm.messages['zh-CN'][key] = {
-								...this.$i18n._vm.messages['zh-CN'][key],
-								...SG666CN[key]
-							}
-						});
-						Object.keys(SG666VI).forEach((key) => {
-							this.$i18n._vm.messages['vi-VN'][key] = {
-								...this.$i18n._vm.messages['vi-VN'][key],
-								...SG666VI[key]
-							}
-						});
-					}
-					this.initSystem()
-				})
-				.catch(() => {
-					this.$store.commit("setSkgCode", {});
 				});
+
+				// 新增key
+				i18n._vm.messages['vi-VN'].lottery = viVNSGMGM.lottery
+				i18n._vm.messages['vi-VN'].betLists = viVNSGMGM.betLists
+				i18n._vm.messages['vi-VN'].betDetails = viVNSGMGM.betDetails
+				i18n._vm.messages['vi-VN'].pK10Bet = viVNSGMGM.pK10Bet
+			}
+			if (data.codeKey === 'SG666'){
+				// 客制翻译修改
+				// 覆盖相同key
+				Object.keys(SG666CN).forEach((key) => {
+					this.$i18n._vm.messages['zh-CN'][key] = {
+						...this.$i18n._vm.messages['zh-CN'][key],
+						...SG666CN[key]
+					}
+				});
+				Object.keys(SG666VI).forEach((key) => {
+					this.$i18n._vm.messages['vi-VN'][key] = {
+						...this.$i18n._vm.messages['vi-VN'][key],
+						...SG666VI[key]
+					}
+				});
+			}
+			this.initSystem()
 		},
 
 		initMemberInfo() {
