@@ -1,6 +1,6 @@
 <template>
 	<div id="page-toolbar">
-		<van-nav-bar class="preferential" fixed safe-area-inset-top
+		<van-nav-bar class="preferential"
 			v-if="active==='preferential'">
 			<template #title>
 				<div class="radius-5 background-white preferential-title flex align-items-center">
@@ -22,7 +22,7 @@
 			</template> -->
 		</van-nav-bar>
 
-		<van-nav-bar class="member" fixed safe-area-inset-top :title="title" :border="false" @click-right="showReport"
+		<van-nav-bar class="member" :title="title" :border="false" @click-right="showReport"
 			v-else-if="active==='member'">
 			<template #right>
 				<div class="report flex py-1" v-if="memberInfo && memberInfo.isOpenCheckIn">
@@ -34,7 +34,7 @@
 			</template>
 		</van-nav-bar>
 		
-		<van-nav-bar fixed safe-area-inset-top :title="title" :border="false"
+		<van-nav-bar :title="title" :border="false"
 			v-else-if="active==='ucs' || active === 'tournaments'">
 			<template #right>
 				<van-icon name="filter-o" size="22" @click="ucsRightClick" v-if="showFilter"/>
@@ -116,7 +116,7 @@
 			</div>
 		</div>
 
-		<van-nav-bar v-else :title="title" :border="false" fixed safe-area-inset-top
+		<van-nav-bar v-else :title="title" :border="false"
 			@click-right="redirectRouter(meta.routerRight)" :class="meta.class">
 			<template #title>
 				<van-image :src="$portrait(siteConfig && siteConfig.logo && siteConfig.logo.homeLogo84)" height="28"

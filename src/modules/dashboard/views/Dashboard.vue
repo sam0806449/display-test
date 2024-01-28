@@ -773,40 +773,41 @@
 						},
 					];
 				} else if (this.skgCode === this.skgGameCode) {
+					console.log('img');
 					return [{
-							img: '/images/dashboard/deposit.png',
+							img: './images/dashboard/deposit.png',
 							title: 'deposit',
 							link: 'recharge'
 						},
 						{
-							img: '/images/dashboard/withdrawal.png',
+							img: './images/dashboard/withdrawal.png',
 							title: 'withdraw',
 							link: 'withdraw'
 						},
 						{
-							img: '/images/dashboard/transfer.png',
+							img: './images/dashboard/transfer.png',
 							title: 'transfer',
 							link: 'purses/transfer'
 						},
 						{
-							img: '/images/dashboard/vip_info.png',
+							img: './images/dashboard/vip_info.png',
 							title: 'vip',
 							link: 'privileges'
 						}
 					];
 				} else {
 					return [{
-							img: '/images/dashboard/deposit.png',
+							img: './images/dashboard/deposit.png',
 							title: 'deposit',
 							link: 'recharge'
 						},
 						{
-							img: '/images/dashboard/withdrawal.png',
+							img: './images/dashboard/withdrawal.png',
 							title: 'withdraw',
 							link: 'withdraw'
 						},
 						{
-							img: '/images/dashboard/vip_info.png',
+							img: './images/dashboard/vip_info.png',
 							title: 'vip',
 							link: 'privileges'
 						}
