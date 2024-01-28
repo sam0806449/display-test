@@ -1,0 +1,297 @@
+// 防闪烁
+[v-cloak] {
+  display: none;
+}
+
+.van-toast__text{
+  word-break: break-word !important;
+}
+
+.text-white {
+  color: white !important;
+}
+
+.text-black {
+  color: black !important;
+}
+
+.text-grey {
+  color: lightslategray !important;
+}
+
+.text-grey_1 {
+  color: rgb(102, 102, 102) !important;
+}
+
+.caption {
+  font-size: 12px !important;
+  font-weight: 400 !important;
+}
+
+.caption-bold {
+  font-size: 12px !important;
+  font-weight: bold !important;
+}
+
+.button {
+  font-size: 14px !important;
+  font-weight: 500 !important;
+}
+
+.body-2 {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+}
+
+.body-1 {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+}
+
+.subtitle-1 {
+  font-size: 14px !important;
+  font-weight: 500 !important;
+}
+
+.subtitle-2 {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+}
+
+.subtitle-3 {
+  font-size: 14px !important;
+  font-weight: 600 !important;
+}
+
+.subtitle-4 {
+  font-size: 16px !important;
+  font-weight: 600 !important;
+}
+
+.subtitle-5 {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+}
+
+.headline {
+  font-size: 18px !important;
+  font-weight: 600 !important;
+}
+
+.money-number {
+  font-size: 24px !important;
+  font-weight: 600 !important;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.main-text {
+  color: rgb(91, 127, 251) !important;
+}
+
+.white-text {
+  color: white !important;
+}
+
+.red-text {
+  color: rgb(224, 32, 32) !important;
+}
+
+.ucs-text {
+	color: #7d838e !important;
+}
+
+.sicBo_bet_text {
+	color: rgb(255, 231, 159) !important;
+  word-wrap:break-word;
+  word-break:keep-all;
+}
+
+.title-before {
+  height: 18px;
+  position: relative;
+}
+
+.title-before:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 55%;
+  width: 3px;
+  height: 16px;
+  background: rgb(60, 110, 250);
+  margin-top: -7px;
+
+}
+
+.van-nav-bar .van-icon {
+  color: black !important;
+}
+
+/deep/ .van-tab__text {
+  font-size: 16px;
+}
+
+.background-white {
+  background-color: white;
+}
+
+.background-whitesmoke {
+  background-color: whitesmoke;
+}
+
+.rules-text {
+  white-space: pre-wrap;
+}
+
+.number_garden {
+	width: 22px;
+	height: 22px;
+	line-height: 22px;
+	border-radius: 25px;
+	color: white;
+	background-color: rgb(70, 132, 255);
+	display: inline-block;
+	text-align: center;
+}
+
+.flex {
+  display: flex;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.flex-d-column {
+  flex-direction: column;
+}
+.flex-row-reverse {
+  flex-direction: row-reverse;
+}
+.flex-column-reverse {
+  flex-direction: column-reverse;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.justify-content-start {
+  justify-content: flex-start;
+}
+
+.justify-content-end {
+  justify-content: flex-end;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.van-empty__image {
+  width: 280px !important;
+  height: 130px !important;
+  margin-top: 78px;
+}
+
+figure img {
+  width: 100%;
+}
+
+.vip-lv_position {
+  position: absolute;
+  left: 25px;
+  top: 0;
+}
+
+.rules-text {
+  padding-bottom: 16px;
+
+  > div {
+    padding-top: 12px;
+  }
+}
+
+figure {
+  margin: 16px 0  !important;
+  white-space: nowrap;
+  overflow: hidden;
+
+  table {
+    width: 100%;
+
+    td, th {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+
+    th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+    }
+  }
+}
+
+
+#betRule {
+  .title {
+    width: 82px;
+    height: 36px;
+    line-height: 36px;
+    margin: auto;
+    color: white;
+    text-align: center;
+  }
+
+  .blue {
+    background-image: url("/images/lottery/r_blue.png");
+    background-size: 100%;
+  }
+
+  .red {
+    background-image: url("/images/lottery/r_red.png");
+    background-size: 100%;
+  }
+
+  .yellow {
+    background-image: url("/images/lottery/r_yellow.png");
+    background-size: 100%;
+  }
+}
+
+// 消除transition闪屏
+.css {
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+}
+
+//开启硬件加速
+.css {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+// 去除图片空隙
+img {
+  display: block;
+  float: left;
+  vertical-align: top
+}

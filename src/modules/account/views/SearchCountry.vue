@@ -1,0 +1,132 @@
+<template>
+    <div id="searchCountry">
+        <van-nav-bar
+                :title="$$t('title')"
+                left-arrow
+                @click-left="redirectRouter('/register')"
+                :border="false"
+        />
+
+        <van-search
+                v-model="searchText"
+                show-action
+                :placeholder="$t('searchGames.text')"
+                @cancel="onCancel"
+        />
+
+        <div class="warp text-left mt-2">
+            <scroller>
+                <van-cell-group inset v-if="datas.length > 0">
+                    <template v-for="(item, index) in datas">
+                        <van-cell :title="culture === 'zh-CN' ? item.chinese_name : item.english_name"
+                                  :value="`+${item.phone_code}`" :key="index" @click="cellClick(item)"/>
+                    </template>
+                </van-cell-group>
+
+                <van-empty v-else :description="$t('common.noMore')" class="text-center">
+                    <template #image>
+                        <van-image src="/images/empty/no-more.png" width="280" height="130"/>
+                    </template>
+                </van-empty>
+            </scroller>
+        </div>
+    </div>
+</template>
+
+<script>
+import countrys from '@/common/js/countryCode'
+
+export default {
+	name: 'SearchCountry',
+
+	data: () => ({
+		searchText: '',
+		currencys: []
+	}),
+
+	computed: {
+		getCountrys() {
+			return countrys.countryCodes.length > 0 ? countrys.countryCodes : []
+		},
+
+		datas() {
+			if (this.culture === 'zh-CN') {
+				if (this.searchText) {
+					return this.getCountrys.filter(e => {
+						return ((e.chinese_name && e.chinese_name.indexOf(this.searchText) > -1))
+					})
+				} else {
+					return this.getCountrys
+				}
+			} else {
+				if (this.searchText) {
+					return this.getCountrys.filter(e => {
+						return ((e.english_name && e.english_name.indexOf(this.searchText) > -1))
+					})
+				} else {
+					return this.getCountrys
+				}
+			}
+
+		}
+	},
+
+    created () {
+		this.getCurrency()
+    },
+
+	methods: {
+		getCurrency() {
+			this.$post('/api/Account/GetCurrency')
+				.then(resp => {
+					return this.checkResp(resp, (r) => r.data.success === true)
+				})
+				.then(data => {
+					this.currencys = data.data
+				})
+				.catch(error => {
+					this.procError(error)
+				})
+		},
+
+		onCancel() {
+			this.redirectRouter('/register')
+		},
+
+        cellClick (item) {
+			this.$router.push({
+				path: 'register',
+				query: {
+					phone_code: item.phone_code,
+					countryCode: this.getCode(item.country_code)
+				}
+			})
+        },
+
+		getCode (v) {
+			let c = null
+			this.currencys.forEach(e => {
+				if (e.cultureCode.substring(5, 3) === v) c = e.code
+            })
+            return c
+        },
+
+		$$t(v) {
+			return this.$t('searchCountry.' + v)
+		}
+
+	}
+}
+</script>
+
+<style lang="less" scoped>
+#searchCountry {
+    .warp {
+        position: absolute;
+        top: 100px;
+        right: 0;
+        left: 0;
+        bottom: 0;
+    }
+}
+</style>

@@ -1,0 +1,86 @@
+export default {
+  tabbar: {
+    dashboard: "首页",
+    preferential: '优惠',
+    collections: "收藏",
+    service: "客服",
+    member: "我的",
+	tournaments: '赛事',
+	tournamentsNotes: '注单'
+  },
+
+  toolbar: {
+    changeLanguage: "语言",
+    rechargeNotes: "交易记录",
+    inviteRules: "邀请规则",
+    transferRecord: '转账记录',
+    rebateRecord: '返水记录',
+    preferential: '活动',
+    task: '任务',
+    progress: '记录',
+    reports: '签到',
+    turntableNotes: '中奖记录'
+  },
+
+  scrollView: {
+    pullToRefresh: "下拉刷新",
+    releaseToRefresh: "释放刷新",
+    refreshing: "正在刷新",
+    refreshFinish: "刷新完成",
+    refreshed: "刷新结束",
+    pushToLoad: "上拉加载",
+    releaseToLoad: "释放加载",
+    loading: "正在加载",
+    loadFinish: "加载完成",
+    loaded: "加载结束",
+    noMore: "没有更多数据",
+    updateAt: "更新于 %T",
+    refresh: "刷新",
+    loadMore: "加载"
+  },
+
+  validate: {
+    userName: '用户名不能为空且长度4-16位字母数字组合',
+    userName2: '用户名不能为空且长度6-16位字母数字组合',
+    pwd: '密码不能为空且长度6-16位字母数字组合',
+    confirmPwd: '密码不一致',
+    payPwd: '交易密码不能为空且长度为4位数字',
+    verifyCode: '验证码不能为空',
+    cardNo: '银行卡长度不足',
+    phone: '手机号有误',
+    incorrectLength: '长度不正确',
+    spaceMoreOne: "开头结尾不允许添加空格",
+  },
+
+  common: {
+    success: '操作成功',
+    copySuccess: "复制成功",
+    point: "提示",
+    signOut: "是否退出登录",
+    changeLanguage: "是否切换语言",
+    unSet: "未设置",
+    noMoreTask: "暂无记录，去做任务试试吧~",
+    noMore: "暂无记录~",
+    all: '全部',
+    time: '时间',
+    noNull: '不能为空',
+    imgSizeDesc: '文件大小不能超过 2MB',
+    noDesc: '暂时没有相关描述~',
+    renounceDesc: '是否放弃该任务',
+    copyFailed: '复制失败',
+    clickDesc: '亲~ 你点击太频繁了',
+    complete: '完成',
+    loading: '加载中...',
+    submitSuccess: '提交成功',
+    transformSuccess: '回收成功',
+    refreshSuccess: '刷新成功',
+    unLogin: '请先登录！',
+    copy: '复制',
+    isDotted: '暂无权限！',
+    noNetwork: '网络异常，请稍后再试。',
+    error504: '请求超时，请稍后再试',
+    error401: '没有访问权限',
+    error500: '服务器内部错误',
+    error404: '地址错误'
+  }
+};

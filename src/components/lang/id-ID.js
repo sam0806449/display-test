@@ -1,0 +1,86 @@
+export default {
+	tabbar: {
+		dashboard: "Halaman pertama",
+		preferential: 'Promosi',
+		collections: "Simpan",
+		service: "Admin",
+		member: "Punya saya",
+		tournaments: 'Mencocokkan',
+		tournamentsNotes: 'Slip taruhan'
+	},
+
+	toolbar: {
+		changeLanguage: "Bahasa",
+		rechargeNotes: "Catatan transaksi",
+		inviteRules: "Peraturan undangan",
+		transferRecord: 'Catatan transfer',
+		rebateRecord: 'Rekod rebate',
+		preferential: 'Peraturan event',
+		task: 'Detail misi',
+		progress: 'Catatan pengambilan',
+		reports: 'Daftar masuk',
+		turntableNotes: 'Rekor kemenangan'
+	},
+
+	scrollView: {
+		pullToRefresh: "Tarik ke bawah untuk menyegarkan",
+		releaseToRefresh: "Membiarkan pergi dan menyegarkan",
+		refreshing: "Segarkan",
+		refreshFinish: "Penyegaran selesai",
+		refreshed: "Segarkan akhir",
+		pushToLoad: "Tarik ke atas memuat",
+		releaseToLoad: "Pemuatan rilis",
+		loading: "Memuat",
+		loadFinish: "Memuat selesai",
+		loaded: "Akhir pemuatan",
+		noMore: "Tidak ada data lagi",
+		updateAt: "Diperbarui pada %T",
+		refresh: "Segarkan",
+		loadMore: "beban"
+	},
+
+	validate: {
+		userName: 'Nama pengguna tidak boleh kosong dan panjangnya 4-16 kombinasi alfanumerik',
+		userName2: 'Nama pengguna tidak boleh kosong dan panjangnya 6-16 kombinasi alfanumerik',
+		pwd: 'Kata sandi tidak boleh kosong dan panjangnya adalah 6-16 kombinasi alfanumerik',
+		confirmPwd: 'Kata sandi tidak konsisten',
+		payPwd: 'Kata sandi transaksi tidak boleh kosong dan panjangnya 4 digit',
+		verifyCode: 'Kode verifikasi tidak boleh kosong',
+		cardNo: 'Panjang kartu bank tidak mencukupi',
+		phone: 'Nomor telepon salah',
+		incorrectLength: 'Panjang salah',
+		spaceMoreOne: "Spasi tidak diperbolehkan di awal dan akhir",
+	},
+
+	common: {
+		success: 'Operasi yang berhasil',
+		copySuccess: "Berhasil disalin",
+		point: "Pengingat",
+		signOut: "Apakah keluar dari login",
+		changeLanguage: "Apakah akan beralih bahasa",
+		unSet: "Tidak disetel",
+		noMoreTask: "Sementara tidak ada catatan, ayo coba tugas~",
+		noMore: "Sementara tidak ada catatan~",
+		all: 'Semua',
+		time: 'Waktu',
+		noNull: 'Tidak boleh kosong',
+		imgSizeDesc: 'Ukuran file tidak boleh melebihi 2MB',
+		noDesc: 'Tidak ada deskripsi yang relevan untuk saat ini~',
+		renounceDesc: 'Apakah akan menyerah tugas ini',
+		copyFailed: 'Gagal disalin',
+		clickDesc: 'Sayang~ Kamu terlalu sering mengklik',
+		complete: 'Selesai',
+		loading: 'Sedang memuat...',
+		submitSuccess: 'Berhasil dikirim',
+		transformSuccess: 'Pemulihan berhasil,sedang memuat ulang dompet',
+		refreshSuccess: 'Berhasil segarkan',
+		unLogin: 'silahkan login dulu！',
+		copy: 'Salin',
+		isDotted: 'Belum ada izin!',
+		noNetwork: 'Anomali jaringan, silakan coba lagi nanti.',
+		error504: 'Waktu permintaan habis, silakan coba lagi nanti',
+		error401: 'Tidak ada izin akses',
+		error500: 'Kesalahan server internal',
+		error404: 'Kesalahan alamat'
+	}
+};

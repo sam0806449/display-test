@@ -1,0 +1,86 @@
+export default {
+  tabbar: {
+    dashboard: "Trang chủ",
+    preferential: 'Khuyến mãi',
+    collections: "Sưu tập",
+    service: "CSKH",
+    member: "Tài khoản",
+	tournaments: 'Cuộc thi đấu',
+	tournamentsNotes: 'Phiếu cược'
+  },
+
+  toolbar: {
+    changeLanguage: "Ngôn ngữ",
+    rechargeNotes: "Lịch sử giao dịch",
+    inviteRules: "Quy tắc lời mời",
+    transferRecord: 'Lịch sử chuyển tiền',
+    rebateRecord: 'Log hoàn lại',
+    preferential: 'Sự kiện',
+    task: 'Nhiệm vụ',
+    progress: 'LỊCH SỬ',
+    reports: 'Điểm danh',
+    turntableNotes: 'Lịch sử trúng thưởng'
+  },
+
+  scrollView: {
+    pullToRefresh: "Kéo xuống để làm mới",
+    releaseToRefresh: "Giải phóng bản cập nhật",
+    refreshing: "Đang cập nhật",
+    refreshFinish: "Làm mới hoàn tất",
+    refreshed: "Làm mới kết thúc",
+    pushToLoad: "Đang tải lên",
+    releaseToLoad: "Nạp",
+    loading: "Đang tải",
+    loadFinish: "Nạp xong",
+    loaded: "Kết thúc.",
+    noMore: "Không có thêm dữ liệu.",
+    updateAt: "Cập nhật %T",
+    refresh: "Làm mới",
+    loadMore: "Đậu tuy."
+  },
+
+  validate: {
+    userName: 'Tên người dùng không được để trống, độ dài từ 4-16 kết hợp chữ và số',
+    userName2: 'Tên người dùng không được để trống, độ dài từ 6-16 kết hợp chữ và số',
+    pwd: 'Mật khẩu không được để trống, độ dài từ 6-16 kết hợp chữ và số',
+    confirmPwd: 'Mật khẩu không khớp',
+    payPwd: 'Mật khẩu giao dịch không được để trống, độ dài là 4 chữ số',
+    verifyCode: 'Mã xác minh không được để trống',
+    cardNo: 'Độ dài thẻ ngân hàng không đủ',
+    phone: 'Số điện thoại không chính xác',
+    incorrectLength: 'Chiều dài không chính xác',
+		spaceMoreOne: "Không được phép có dấu cách ở đầu và cuối",
+  },
+
+  common: {
+    success: 'Chiến dịch thành công',
+    copySuccess: "Sao chép thành công",
+    point: "Gợi ý",
+    signOut: "Bạn muốn đăng xuất?",
+    changeLanguage: "Bạn muốn chuyển đổi ngôn ngữ?",
+    unSet: "Chưa thiết lập",
+    noMoreTask: "Chưa có lịch sử, hãy thử thực hiện nhiệm vụ ~",
+    noMore: "Chưa có lịch sử~",
+    all: 'Tất cả',
+    time: 'Thời gian',
+    noNull: 'Không được trống',
+    imgSizeDesc: 'Kích thước tệp không được vượt quá 2MB',
+    noDesc: 'Hiện tại không có mô tả liên quan~',
+    renounceDesc: 'Bạn muốn từ bỏ nhiệm vụ',
+    copyFailed: 'Sao chép không thành công',
+    clickDesc: 'Bạn muốn từ bỏ nhiệm vụ',
+    complete: 'Hoàn tất',
+    loading: 'Loading...',
+    submitSuccess: 'Gửi thành công',
+    transformSuccess: 'Thu hồi thành công',
+    refreshSuccess: 'Làm mới thành công',
+    unLogin: 'vui lòng đăng nhập trước！',
+    copy: 'Sao chép',
+    isDotted: 'Chưa có sự cho phép!',
+    noNetwork: 'Mạng bất thường, vui lòng thử lại sau.',
+    error504: 'Yêu cầu đã hết thời gian chờ, vui lòng thử lại sau',
+    error401: 'Không có quyền truy cập',
+    error500: 'Lỗi máy chủ nội bộ',
+    error404: 'Lỗi địa chỉ'
+  }
+};
