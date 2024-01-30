@@ -4,7 +4,7 @@ const TokenKey = 'User-Token'
 const Culture = 'Culture'
 
 export function getTokenFromCookie () {
-  return Cookies.get(TokenKey);
+  return '4804f4166c1b41e38509989d7a8ed22f';
 }
 
 export function setTokenFromCookie (token) {

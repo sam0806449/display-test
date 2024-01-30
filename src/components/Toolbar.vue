@@ -345,8 +345,7 @@ import {getTokenFromCookie} from "@/utils/auth";
 		}
 
 		.lotteryLobby {
-			background-image: url("/images/banner/lotteryLobby.png");
-			background-size: 100% 100%;
+			background-color: #447ffa;
 
 			/deep/ .van-nav-bar__title {
 				color: #FFF;

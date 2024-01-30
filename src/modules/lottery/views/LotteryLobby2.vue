@@ -167,12 +167,11 @@
 				height: 48px;
 				line-height: 48px;
 				text-align: center;
-				background-image: url("/images/lottery/lotteryLobby/nav_bg.png");
 				background-size: 100% 100%;
 				background-color: #ddd;
 			}
 			.btn-active {
-				background-image: url("/images/lottery/lotteryLobby/nav_bg_active.png");
+				background-color: #000;
 				color: white;
 				opacity: 1;
 			}
@@ -186,7 +185,6 @@
 				width: 100px;
 				height: 48px;
 				text-align: center;
-				background-image: url("/images/lottery/lotteryLobby/nav_bg.png");
 				background-size: 100% 100%;
 				background-color: #ddd;
 				margin-bottom: 2px;
@@ -197,7 +195,6 @@
 			}
 
 			.van-tab--active {
-				background-image: url("/images/lottery/lotteryLobby/nav_bg_active.png");
 				color: white;
 			}
 

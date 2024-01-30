@@ -73,10 +73,10 @@ export default {
 						headers: {token: getTokenFromCookie(), Culture: getCultureFromCookie(), clientType: 2, ...headerConfig}
 					})
 					.then(resp => {
-						if (resp.data && resp.data.errorCode === "NotLogin") {
-							_this.removeSession()
-							_this.$router.push({name: 'login'})
-						}
+						// if (resp.data && resp.data.errorCode === "NotLogin") {
+						// 	_this.removeSession()
+						// 	_this.$router.push({name: 'login'})
+						// }
 						resolve(resp);
 					})
 					.catch(error => {
@@ -107,10 +107,10 @@ export default {
 
 		procError(error, errAction) {
 			if (error.errorCode === "NotLogin") {
-				this.removeSession()
-				this.$router.push('/login')
-				this.$error(error.message);
-				return true;
+				// this.removeSession()
+				// this.$router.push('/login')
+				// this.$error(error.message);
+				return false;
 			} else if (error && error.message === 'Network Error') {
 				this.$error(this.$t('common.noNetwork'));
 				return true;

@@ -4,8 +4,8 @@ export default [{
 		component: () => import(`@/modules/dashboard/views/Dashboard`),
 		meta: {
 			title: "dashboard.title",
-			leftIcon: '/images/toolbar/noticeBar.png',
-			rightIcon: '/images/toolbar/language.png',
+			leftIcon: './images/toolbar/noticeBar.png',
+			rightIcon: './images/toolbar/language.png',
 			rightText: 'changeLanguage',
 			routerLeft: '/app/messages',
 			routerRight: '/app/changeLanguage',
