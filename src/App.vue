@@ -30,7 +30,7 @@
 				const UA = window.navigator.userAgent.toLowerCase();
 				if ( UA.indexOf('iphone') > -1 && UA.indexOf('safari') === -1 ) {
 					const theDom = document.getElementById("app");
-					theDom.style.transform = "translateY(86px)";
+					theDom.style.transform = "translateY(90px)";
 				}
 			}
 		}
@@ -51,13 +51,4 @@
 		bottom: 0;
 		overflow: hidden;
 	}
-	body {
-		padding-bottom: env(safe-area-inset-bottom);
-	}
-	@supports (bottom: constant(safe-area-inset-bottom)) or (bottom: env(safe-area-inset-bottom)) {
-		#app {
-			margin-bottom: constant(safe-area-inset-bottom);
-			margin-bottom: env(safe-area-inset-bottom);
-		}
-    }
 </style>
