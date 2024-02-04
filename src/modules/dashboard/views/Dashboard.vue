@@ -1,5 +1,7 @@
 <template>
 	<div id="dashboard" v-if="skgCode" :style="{background: `${handleBgColor()}`}">
+
+		<!-- <div class="com_text">{{com_text}}</div> -->
 		
 		<template v-if="skinCode === 'SG888'">
 			<scroller>
@@ -15,7 +17,7 @@
 					</van-swipe>
 
 					<van-notice-bar left-icon="volume-o" color="rgb(152, 167, 181)" background="rgb(247, 248, 249)">
-						<div class="body-2" @click="redirectScrollMsgs">{{ notice }}</div>
+						<div class="body-2" @click="redirectScrollMsgs">{{ com_text }}</div>
 
 						<van-icon slot="left-icon" name="/images/dashboard/notice.png" size="20" class="mr-1" />
 
@@ -216,7 +218,7 @@
 
 			<div class="dashboard-top">
 				<van-notice-bar v-if="skinCode === 'SGGJ'" left-icon="volume-o" color="rgb(152, 167, 181)" background="rgb(247, 248, 249)">
-					<div class="body-2" @click="redirectScrollMsgs">{{notice}}</div>
+					<div class="body-2" @click="redirectScrollMsgs">{{com_text}}</div>
 
 					<van-icon slot="left-icon" name="/images/dashboard/notice.png" size="20" class="mr-1" />
 
@@ -239,7 +241,7 @@
 				</van-swipe>
 
 				<van-notice-bar v-if="!['SGGJ', 'SGYF'].includes(skinCode)" left-icon="volume-o" color="rgb(152, 167, 181)" background="rgb(247, 248, 249)">
-					<div class="body-2" @click="redirectScrollMsgs">{{notice}}</div>
+					<div class="body-2" @click="redirectScrollMsgs">{{com_text}}</div>
 
 					<van-icon slot="left-icon" name="/images/dashboard/notice.png" size="20" class="mr-1" />
 
@@ -270,7 +272,7 @@
 			<div class="SGYF-hotgame" v-if="skinCode === 'SGYF' && SGYF_tabActiveName === 'hot'">
 				<div class="px-3">
 					<van-notice-bar left-icon="volume-o" color="rgb(152, 167, 181)" background="rgb(247, 248, 249)">
-						<div @click="redirectScrollMsgs">{{notice}}</div>
+						<div @click="redirectScrollMsgs">{{com_text}}</div>
 						<van-icon slot="left-icon" name="/images/dashboard/notice.png" size="15" class="mr-1" />
 					</van-notice-bar>
 				</div>
@@ -675,6 +677,7 @@
 		},
 
 		data: () => ({
+			notice: '123',
 			totalGameData: {},
 			gameCategorys: [],
 			platformsOverlay: false,
@@ -689,7 +692,6 @@
 			platforms: [],
 			platformIndex: 0,
 			swipes: [],
-			notice: 'xxxxxxxxxx',
 			popMsgs: null,
 			showPopup: false,
 			refreshIcon: false,
@@ -712,6 +714,9 @@
 		}),
 
 		computed: {
+			com_text(){
+				return window.navigator.userAgent.toLowerCase();
+			},
 			isAllGameGotFinished() {
 				return Object.keys(this.totalGameData).length !== 0;
 			},
@@ -864,7 +869,7 @@
 						else if (this.skgCode === this.skyLotteryCode) this.onGetLottery()
 						else this.getGameCategorys();
 						this.onLoadSlide();
-						this.onLoadAllNotice();
+						// this.onLoadAllNotice();
 						// 彩种map
 						this.getCurrency();
 						// this.$refs.countDownHotMatch.pause();
@@ -879,7 +884,7 @@
 				if(this.skinCode === '9393') this.totalDataOf9393 = this.$sessionGet('save_totalDataOf9393') || this.getGameCategorys();
 				this.getHotLists(); // 一般热门游戏
 				this.onLoadSlide();
-				this.onLoadAllNotice();
+				// this.onLoadAllNotice();
 				this.init();
 			}
 		},
@@ -2007,5 +2012,15 @@
 	align-items: center;
 	color: #999;
 	padding: 1px 5px;
+}
+.com_text {
+	position: absolute;
+	z-index: 999;
+	background: #fff;
+	width: 300px;
+	height: 100px;
+	top: 150px;
+	color: #fff;
+	background-color: #000;
 }
 </style>

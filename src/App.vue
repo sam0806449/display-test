@@ -1,5 +1,5 @@
 <template>
-	<div id="app v2">
+	<div id="app" update="1.0">
 		<keep-alive v-if="$route.meta.keepAlive" :max="5">
 			<router-view></router-view>
 		</keep-alive>
