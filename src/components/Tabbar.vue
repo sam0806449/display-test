@@ -182,4 +182,10 @@
 			}
 		}
 	}
+	/deep/ .van-tabbar-item__text {
+		text-align: center;
+	}
+	/deep/ .van-tabbar-item {
+		background-color: green;
+	}
 </style>

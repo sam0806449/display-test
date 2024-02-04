@@ -183,7 +183,6 @@ export default {
 				.then(() => {
 					this.initMemberData()
 					this.initMemberInfo();
-					this.onGetUnreadMessagesNumber()
 				})
 				.catch(error => {
 					this.removeSession()

@@ -816,15 +816,7 @@
 			},
 
 			isShowAppDownload() {
-				const notShow = ['SGYABO', 'XOSOVN', 'SGKP'];
-				if (this.siteConfig && !this.siteConfig.appDownloadUrl) {
-					return false;
-				}
-				if (this.siteConfig && notShow.indexOf(this.siteConfig.codeKey)>-1 ) {
-					return false;
-				} else {
-					return this.showAppDownload;
-				}
+				return false;
 			},
 
 			winBroadcast() {

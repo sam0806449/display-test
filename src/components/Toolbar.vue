@@ -254,7 +254,7 @@ import {getTokenFromCookie} from "@/utils/auth";
 
 		/deep/ .van-nav-bar {
 			height: 46px;
-
+			background-color: red;
 			.van-nav-bar__title {
 				font-size: 16px;
 				font-weight: 600;
