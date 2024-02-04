@@ -1,5 +1,5 @@
 <template>
-	<div id="app" update="1.0">
+	<div id="app" update="4.0">
 		<keep-alive v-if="$route.meta.keepAlive" :max="5">
 			<router-view></router-view>
 		</keep-alive>
@@ -31,6 +31,7 @@
 				if ( UA.indexOf('iphone') > -1 && UA.indexOf('safari') === -1 ) {
 					const theDom = document.getElementById("app");
 					theDom.style.transform = "translateY(90px)";
+					theDom.style.maxHeight = "17.41333rem";
 				}
 			}
 		}

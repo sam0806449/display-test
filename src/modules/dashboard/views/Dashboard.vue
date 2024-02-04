@@ -402,7 +402,7 @@
 										v-show="!(isShowHot !== 'hot' && item.code ==='hot')"
 										@click="getGamePlatforms(item.code), changePlatformIndex(index)">
 										<van-image
-											:src="platformCode === item.code ? `/images/dashboard/sidebar/categorys/active/${item.code}.png` : `/images/dashboard/sidebar/categorys/${item.code}.png`">
+											:src="platformCode === item.code ? `./images/dashboard/sidebar/categorys/active/${item.code}.png` : `./images/dashboard/sidebar/categorys/${item.code}.png`">
 											<div class="gameCategoryName">{{item.name}}</div>
 											<template v-slot:loading>
 												<van-loading type="spinner" size="20" />
