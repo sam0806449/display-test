@@ -26,14 +26,14 @@
 							<van-button v-if="siteConfig && siteConfig.kfUrl"
 								icon="/images/service/btn_icon.png"
 								color="linear-gradient(to right, rgb(117, 162, 255), rgb(70, 132, 255))" block
-								class="elevation-2" @click="linkOpen(siteConfig && siteConfig.kfUrl)">
+								class="elevation-2" @click="linkOpenByIframe(siteConfig && siteConfig.kfUrl)">
 								{{$$t('kf_1')}}
 							</van-button>
 						</van-col>
 						<van-col span="12">
 							<van-button v-if="siteConfig && siteConfig.kfqqUrl"
 								class="main-text elevation-2" block
-								@click="linkOpen(siteConfig && siteConfig.kfqqUrl)">
+								@click="linkOpenByIframe(siteConfig && siteConfig.kfqqUrl)">
 								{{$$t('kf_2')}}
 							</van-button>
 						</van-col>

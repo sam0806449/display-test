@@ -247,6 +247,15 @@ export default {
 			window.open(url, '_blank');
 		},
 
+		linkOpenByIframe(url) {
+			if (url.indexOf('/t.me/') > -1 ) {
+				return this.linkOpen(url);
+				// return plus.runtime.openURL(url);
+			}
+			sessionStorage.setItem('iframeUrl', url);
+			this.$router.push('/app/iframePage');
+		},
+
 		isLogin() {
 			if (!getTokenFromCookie()) {
 				this.$error(this.$t('common.unLogin'))
